@@ -49,24 +49,39 @@ body {
 
 .accordion-item {
     border-bottom: 1px hsl(240, 5%, 91%) solid;
+    margin: auto 20px;
 }
 
 .accordion-h {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     border: none;
     background: transparent;
+    margin-bottom: 15px;
     padding: 0;
     font-size: 0.60em;
     font-family: 'Kumbh sans', sans-serif;
     color: hsl(237, 12%, 33%);
+    text-align: left;
 }
 
-.arrow {
-    margin: 0;
+.accordion-h::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-image: url('../images/icon-arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
 }
 
 .accordion-p {
     font-size: 0.75em;
+    line-height: 1.5em;
     color: hsl(240, 6%, 50%);
+    margin-right: 20px;
 }
 
 h1 {
@@ -74,6 +89,14 @@ h1 {
     font-size: 2em;
 }
 
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bold {
+    font-weight: 700;
+} /**For Javascript when accordion is opened**/
 
 /**Footer Styles**/
 
@@ -111,6 +134,10 @@ footer a {
     #mobile-img {
         display: none;
     }
+    
+    #desktop-img {
+        display: flex;
+    }
 
     .img-container, .text-container {
         flex: 1; 
@@ -129,4 +156,9 @@ footer a {
         padding-right: 30px;
         transform: translateX(-60px);
     }
+
+    .text-container {
+        margin: 75px 75px 75px 0;
+    }
+
 }
