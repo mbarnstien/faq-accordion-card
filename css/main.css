@@ -18,15 +18,60 @@ body {
 .card {
     background: #ffffff;
     border-radius: 20px;
-    max-width: 900px;
+    max-width: 325px;
+    margin: 100px auto;
+    background-image: url('../images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center 0%;
+    background-size: 75%;
 }
 
-.hide {
+.card-box {
+    display: none;
+}
+
+#desktop-img, .card-box {
     display: none;
 } 
 
+.img-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 240px;
+    margin: auto;
+    transform: translateY(-59%);
+}
+
+.text-container {
+    margin: -80px auto;
+}
+
+.accordion-item {
+    border-bottom: 1px hsl(240, 5%, 91%) solid;
+}
+
+.accordion-h {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 0.60em;
+    font-family: 'Kumbh sans', sans-serif;
+    color: hsl(237, 12%, 33%);
+}
+
+.arrow {
+    margin: 0;
+}
+
+.accordion-p {
+    font-size: 0.75em;
+    color: hsl(240, 6%, 50%);
+}
+
 h1 {
     text-align: center;
+    font-size: 2em;
 }
 
 
@@ -44,17 +89,37 @@ footer a {
 
 @media only screen and (min-width: 1200px) {
     .card {
+        position: relative;
         display: flex;
         max-width: 900px;
         margin: 120px auto;
         background-image: url('../images/bg-pattern-desktop.svg');
-        background-size: contain;
+        background-size: 400px;
         background-repeat: no-repeat;
-        background-position: left center;
+        background-position: -13% center;
     }
     
+    .card-box {
+        display: block;
+        position: absolute;
+        top: 57%;
+        left: 0;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 1;
+    }
+
+    #mobile-img {
+        display: none;
+    }
+
     .img-container, .text-container {
-        flex: 1;
+        flex: 1; 
+    }
+
+    .img-container {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
     }
 
     .img-container img{
@@ -62,5 +127,6 @@ footer a {
         height: auto;
         max-width: 400px;
         padding-right: 30px;
+        transform: translateX(-60px);
     }
 }
