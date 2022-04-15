@@ -1,11 +1,66 @@
+html {
+    box-sizing: initial;
+    font-size: 100%;
+}
 
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    max-width: 900px;
+}
+
+.hide {
+    display: none;
+} 
+
+h1 {
+    text-align: center;
+}
 
 
 /**Footer Styles**/
+
 footer { 
     font-size: 11px; 
     text-align: center; 
 }
 footer a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/**Desktop Styles**/
+
+@media only screen and (min-width: 1200px) {
+    .card {
+        display: flex;
+        max-width: 900px;
+        margin: 120px auto;
+        background-image: url('../images/bg-pattern-desktop.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+    
+    .img-container, .text-container {
+        flex: 1;
+    }
+
+    .img-container img{
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        padding-right: 30px;
+    }
 }
