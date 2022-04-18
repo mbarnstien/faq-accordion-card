@@ -20,7 +20,8 @@ document.querySelectorAll('.accordion-h').forEach((item) => {
                 accCollapse.style.height = '';
             }, 300);
         } else {
-            accCollapse.classList = 'accordion-collapse collapse collapsing';
+
+            accCollapse.classList = 'accordion-collapse collapsing';
 
             setTimeout(() => {
                 accCollapse.style.height = '0px';
