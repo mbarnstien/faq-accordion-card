@@ -44,7 +44,8 @@ body {
 }
 
 .text-container {
-    margin: -80px auto;
+    margin: auto;
+    transform: translateY(-25%)
 }
 
 .accordion-item {
@@ -59,9 +60,10 @@ body {
     width: 100%;
     border: none;
     background: transparent;
+    margin-top: 15px;
     margin-bottom: 15px;
     padding: 0;
-    font-size: 0.60em;
+    font-size: 1em;
     font-family: 'Kumbh sans', sans-serif;
     color: hsl(237, 12%, 33%);
     text-align: left;
@@ -75,6 +77,7 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    transition: transform 300ms ease-in-out;
 }
 
 .accordion-p {
@@ -82,6 +85,7 @@ body {
     line-height: 1.5em;
     color: hsl(240, 6%, 50%);
     margin-right: 20px;
+    padding: 10px auto;
 }
 
 h1 {
@@ -89,14 +93,27 @@ h1 {
     font-size: 2em;
 }
 
-h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+/**For Javascript when accordion is opened**/
+
+.accordion-h.open {
+    font-weight: 700;
 }
 
-.bold {
-    font-weight: 700;
-} /**For Javascript when accordion is opened**/
+.accordion-h.open::after {
+    transform: rotate(180deg);
+}
+
+.accordion-collapse.collapse {
+    display: none;
+}
+
+.accordion-collapse.collapsing {
+
+}
+
+.accordion-collapse.open {
+    display: block; 
+}
 
 /**Footer Styles**/
 
@@ -159,6 +176,12 @@ footer a {
 
     .text-container {
         margin: 75px 75px 75px 0;
+        transform: translateY(0%);
+    }
+
+    h1 {
+        text-align: left;
+        margin: auto auto 40px 20px;
     }
 
 }
